@@ -7,7 +7,17 @@
 <body>
 	<script>
 		var treeSize = +prompt('Введите высоту ёлки');
-		alert(treeSize);
+		var tree = "";
+
+		for (var i = 0; i < treeSize; i++) {
+			for (var j = 0; j < i + 1; j++) {
+				tree += "*";
+			}
+			
+			tree += "\n";
+		}
+
+		alert(tree);
 	</script>
 </body>
 </html>
