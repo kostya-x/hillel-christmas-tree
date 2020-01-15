@@ -12,13 +12,8 @@
 		var spaces = treeSize;
 
 		for (var i = 0; i < treeSize; i++) {
-			for (var k = 0; k < spaces - i; k++) {
-				tree += " ";
-			}
-
-			for (var j = 0; j < i + stars; j++) {
-				tree += "*";
-			}
+			tree += " ".repeat(spaces - i);
+			tree += "*".repeat(i + stars);
 			
 			tree += "\n";
 			stars++;
