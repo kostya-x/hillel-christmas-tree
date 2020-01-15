@@ -8,13 +8,20 @@
 	<script>
 		var treeSize = +prompt('Введите высоту ёлки');
 		var tree = "";
+		var stars = 1;
+		var spaces = treeSize;
 
 		for (var i = 0; i < treeSize; i++) {
-			for (var j = 0; j < i + 1; j++) {
+			for (var k = 0; k < spaces - i; k++) {
+				tree += " ";
+			}
+
+			for (var j = 0; j < i + stars; j++) {
 				tree += "*";
 			}
 			
 			tree += "\n";
+			stars++;
 		}
 
 		alert(tree);
