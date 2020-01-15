@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Christmas tree</title>
+  <meta charset="UTF-8">
+  <title>Christmas tree</title>
 </head>
 <body>
-	<script>
-		var treeSize = +prompt('Введите высоту ёлки');
-		var tree = "";
-		var stars = 1;
-		var spaces = treeSize;
+  <script>
+    var treeSize = +prompt('Введите высоту ёлки');
+    var tree = "";
+    var stars = 1;
+    var spaces = treeSize;
 
-		for (var i = 0; i < treeSize; i++) {
-			tree += " ".repeat(spaces - i);
-			tree += "*".repeat(i + stars);
-			
-			tree += "\n";
-			stars++;
-		}
+    for (var i = 0; i < treeSize; i++) {
+      tree += " ".repeat(spaces - i);
+      tree += "*".repeat(i + stars);
 
-		alert(tree);
-	</script>
+      tree += "\n";
+      stars++;
+    }
+
+    alert(tree);
+  </script>
 </body>
 </html>
