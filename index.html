@@ -10,7 +10,6 @@
     var treeSymbol = prompt('Введите имвол для отрисовки', '*');
     var tree = "";
     var symbols = 1;
-    var spaces = treeSize;
 
     function checkSymbolAmount(symbol) {
       if (symbol.length === 1) {
@@ -21,8 +20,10 @@
     }
 
     function drawTree(size, symbol = '*') {
+      var line = treeSize;
+
       for (var i = 0; i < treeSize; i++) {
-        tree += " ".repeat(spaces - i) + symbol.repeat(i + symbols) + "\n";
+        tree += symbol.repeat(i + symbols).padStart(line++, " ") + "\n";
 
         symbols++;
       }
