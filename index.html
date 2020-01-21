@@ -7,7 +7,7 @@
 <body>
   <script>
     var treeSize = +prompt('Введите высоту ёлки');
-    var treeSymbol = prompt('Введите имвол для отрисовки', 'не больше одного');
+    var treeSymbol = prompt('Введите имвол для отрисовки', '*');
     var tree = "";
     var symbols = 1;
     var spaces = treeSize;
@@ -15,17 +15,15 @@
     function checkSymbolAmount(symbol) {
       if (symbol.length === 1) {
         return symbol;
-      } else {
-        return symbol[0];
       }
+      
+      return symbol[0];
     }
 
-    function drawTree(size, symbol) {
+    function drawTree(size, symbol = '*') {
       for (var i = 0; i < treeSize; i++) {
-        tree += " ".repeat(spaces - i);
-        tree += symbol.repeat(i + symbols);
+        tree += " ".repeat(spaces - i) + symbol.repeat(i + symbols) + "\n";
 
-        tree += "\n";
         symbols++;
       }
 
